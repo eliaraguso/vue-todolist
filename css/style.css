@@ -7,6 +7,11 @@
 
 /* Common */
 
+/* Typo */
+body {
+    font-family: 'Lato', sans-serif;
+}
+
 /* Header */
 header {
     text-align: center;
@@ -42,7 +47,11 @@ header {
     padding: 30px 50px;
 }
 
-#main p {
-    line-height: 3rem;
+#main li {
+    line-height: 2.4rem;
     border-bottom: 1px solid rgb(194, 194, 194);
+}
+
+#main ul {
+    list-style: none;
 }

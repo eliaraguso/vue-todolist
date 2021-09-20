@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
         integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
@@ -17,14 +20,15 @@
         <header id="header">
             <img id="logo-img" src="./images/logo.png" alt="Logo Boolean">
             <form>
-                <input type="text" placeholder="Nuovo To Do" id="todo-txt">
-                <input type="button" value="Aggiungi" id="todo-btn">
+                <input v-model="newTodo" type="text" placeholder="Nuovo To Do" id="todo-txt">
+                <input @click="addTodo()" type="button" value="Aggiungi" id="todo-btn">
             </form>
         </header>
         <main id="main">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi iste nemo maxime mollitia architecto, velit similique odit recusandae expedita odio aperiam inventore quis, aut consequatur error perspiciatis quo facilis dolore!</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi iste nemo maxime mollitia architecto, velit similique odit recusandae expedita odio aperiam inventore quis, aut consequatur error perspiciatis quo facilis dolore!</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi iste nemo maxime mollitia architecto, velit similique odit recusandae expedita odio aperiam inventore quis, aut consequatur error perspiciatis quo facilis dolore!</p>
+            <ul>
+                <li v-for="(todo, index) in todos">{{todo}}</li>
+                
+            </ul>
             
         </main>
     </div>
