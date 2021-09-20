@@ -25,7 +25,9 @@ const app = new Vue({
                 this.todos.push(this.newTodo);
                 this.newTodo = ""
             }
-
+        },
+        removeTodo: function(todoIndex) {
+            this.todos.splice(todoIndex, 1);
         }
     }
 
