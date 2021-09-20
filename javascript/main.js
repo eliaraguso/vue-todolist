@@ -11,14 +11,22 @@ const app = new Vue({
     el: "#root",
     data: {
         todos: [
-            "Fare i compiti",
-            "Fare la spesa",
-            "Fare schifo"
+            {
+                title : "Fare i compiti",
+                done : ""
+            },
+            {
+                title : "Fare i compiti",
+                done : ""
+            },
+            {
+                title : "Fare i compiti",
+                done : ""
+            }
         ],
         newTodo: ""
-
     },
-
+    
     methods: {
         addTodo: function () {
             if (this.newTodo != "") {
@@ -32,3 +40,5 @@ const app = new Vue({
     }
 
 });
+
+
