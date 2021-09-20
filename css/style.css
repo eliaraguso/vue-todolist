@@ -59,3 +59,7 @@ header {
     list-style: none;
 }
 
+main ul li .fa-times {
+    cursor: pointer;
+}
+

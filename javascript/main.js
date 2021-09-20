@@ -23,7 +23,7 @@ const app = new Vue({
         addTodo: function () {
             if (this.newTodo != "") {
                 this.todos.push(this.newTodo);
-                this.newTodo = ""
+                this.newTodo = "";
             }
         },
         removeTodo: function(todoIndex) {

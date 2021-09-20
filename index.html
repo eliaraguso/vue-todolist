@@ -22,14 +22,14 @@
         <header id="header">
             <img id="logo-img" src="./images/logo.png" alt="Logo Boolean">
             <form>
-                <input v-model="newTodo" type="text" placeholder="Nuovo To Do" id="todo-txt">
+                <input v-model="newTodo" type="text" placeholder="Nuovo To Do" id="todo-txt" @keyup.enter="addTodo()">
                 <input @click="addTodo()" type="button" value="Aggiungi" id="todo-btn">
             </form>
         </header>
         <main id="main">
             <ul v-if="todos.length > 0">
                 <li v-for="(todo, index) in todos">
-                    {{todo}} <i class="fas fa-check-square" @click="removeTodo(index)"></i>
+                    {{todo}} <i class="fas fa-times" @click="removeTodo(index)"></i>
                 </li>
             </ul>
             <h2 v-else>Non ci sono ToDo</h2>
