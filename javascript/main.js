@@ -5,9 +5,9 @@
 // Aggiungere lo stato per ogni todo e modificare la visualizzazione dell'elemento in pagina, verde e barrato se il todo è stato fatto o rosso se non è ancora stato fatto.
 // Prevedere inoltre un pulsante per modificare lo stato del singolo todo
 // Google font: Lato
- 
- 
-const app = new Vue ({
+
+
+const app = new Vue({
     el: "#root",
     data: {
         todos: [
@@ -16,12 +16,16 @@ const app = new Vue ({
             "Fare schifo"
         ],
         newTodo: ""
-        
+
     },
 
     methods: {
-        addTodo: function() {
-            this.todos.push(this.newTodo)
+        addTodo: function () {
+            if (this.newTodo != "") {
+                this.todos.push(this.newTodo);
+                this.newTodo = ""
+            }
+
         }
     }
 
